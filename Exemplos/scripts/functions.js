@@ -7,10 +7,20 @@ function digitarValor(valor){
         valorDisplay.value += valor;
     }
 }
-
-
 function imprimirMsg(texto){
-    alert('Vc clickou no botão ' + texto);
+    alert('Vc clicou no botão ' + texto);
+}
+
+function engual(){
+    let conta = valorDisplay.value
+        let num1 = int((conta.slice(0, conta.indexOf("/"))))
+        let num2 = int((conta.slice(conta.indexOf("/", ))))
+        alert(num2)
+ 
+}
+
+function zerar(){
+    valorDisplay.value = "0"
 }
 
 function login(){
