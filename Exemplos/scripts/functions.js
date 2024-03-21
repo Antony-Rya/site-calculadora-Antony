@@ -13,8 +13,10 @@ function imprimirMsg(texto){
 
 function engual(){
     let conta = valorDisplay.value
-        let num1 = parseInt(conta.slice(0, conta.indexOf("/"-1)))
-        let num2 = parseInt(conta.slice(conta.indexOf("/" + 1)))
+        let num1 = conta.slice(0, conta.indexOf("/"-1))
+        let num2 = conta.slice(conta.indexOf("/" + 1))
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
         valorDisplay = num1/num2
         
 
