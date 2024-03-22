@@ -36,29 +36,25 @@ function engual(){
     // }
 
 
-
+    let nums = conta.replace("/", " ").replace("-", " ").replace("+", " ").replace("x", " ")
+    var numeros = nums.split(" ")
+    var num1 = parseInt(numeros[0])
+    var num2 = parseInt(numeros[1])
     switch (true){
+        
         case valorDisplay.value.includes("/"):
             var numeros = conta.split("/")
-            num1 = parseInt(numeros[0])
-            num2 = parseInt(numeros[1])
             valorDisplay.value = num1/num2
             break;
         case valorDisplay.value.includes("+"):
             var numeros = conta.split("+")
-            num1 = parseInt(numeros[0])
-            num2 = parseInt(numeros[1])
             valorDisplay.value = num1+num2
             break;
         case valorDisplay.value.includes("-"):
             var numeros = conta.split("-")
-            num1 = parseInt(numeros[0])
-            num2 = parseInt(numeros[1])
             valorDisplay.value = num1-num2
             break;
         case valorDisplay.value.includes("x"):
-            num1 = parseInt(numeros[0])
-            num2 = parseInt(numeros[1])
             valorDisplay.value = num1*num2
             break;
             
