@@ -56,7 +56,7 @@ function engual(){
             num2 = parseInt(numeros[1])
             valorDisplay.value = num1-num2
             break;
-        case valorDisplay.value.includes("*"):
+        case valorDisplay.value.includes("x"):
             num1 = parseInt(numeros[0])
             num2 = parseInt(numeros[1])
             valorDisplay.value = num1*num2
