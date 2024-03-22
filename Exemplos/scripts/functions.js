@@ -13,31 +13,56 @@ function imprimirMsg(texto){
 
 function engual(){
     let conta = valorDisplay.value
-    if (valorDisplay.includes("/")){
-            var numeros = conta.split("/")
-            num1 = numeros[0]
-            num2 = numeros[1]
-            valorDisplay.value = num1/num2
-    }
-    elif (valorDisplay.includes("-"));{
-        var numeros = conta.split("-")
-            num1 = numeros[0]
-            num2 = numeros[1]
-            valorDisplay.value = num1-num2
-    }
-    elif (valorDisplay.includes("+"));{
-        var numeros = conta.split("+")
-            num1 = numeros[0]
-            num2 = numeros[1]
-            valorDisplay.value = num1+num2
-    }
-    elif (valorDisplay.includes("x"));{
-        var numeros = conta.split("x")
-            num1 = numeros[0]
-            num2 = numeros[1]
-            valorDisplay.value = num1*num2
-    }
+    // if (valorDisplay.value.indexOf("/")){
+    //         var numeros = conta.split("/")
+    //         num1 = numeros[0]
+    //         num2 = numeros[1]
+    //         valorDisplay.value = num1/num2
+    // }else if (valorDisplay.value.indexOf("-"));{
+    //     var numeros = conta.split("-")
+    //         num1 = numeros[0]
+    //         num2 = numeros[1]
+    //         valorDisplay.value = num1-num2
+    // }else if (valorDisplay.value.indexOf("+"));{
+    //     var numeros = conta.split("+")
+    //         num1 = numeros[0]
+    //         num2 = numeros[1]
+    //         valorDisplay.value = num1+num2
+    // }else if (valorDisplay.value.indexOf("x"));{
+    //     var numeros = conta.split("x")
+    //         num1 = numeros[0]
+    //         num2 = numeros[1]
+    //         valorDisplay.value = num1*num2
+    // }
 
+
+
+    switch (true){
+        case valorDisplay.value.includes("/"):
+            var numeros = conta.split("/")
+            num1 = parseInt(numeros[0])
+            num2 = parseInt(numeros[1])
+            valorDisplay.value = num1/num2
+            break;
+        case valorDisplay.value.includes("+"):
+            var numeros = conta.split("+")
+            num1 = parseInt(numeros[0])
+            num2 = parseInt(numeros[1])
+            valorDisplay.value = num1+num2
+            break;
+        case valorDisplay.value.includes("-"):
+            var numeros = conta.split("-")
+            num1 = parseInt(numeros[0])
+            num2 = parseInt(numeros[1])
+            valorDisplay.value = num1-num2
+            break;
+        case valorDisplay.value.includes("*"):
+            num1 = parseInt(numeros[0])
+            num2 = parseInt(numeros[1])
+            valorDisplay.value = num1*num2
+            break;
+            
+    }
             
 
         
