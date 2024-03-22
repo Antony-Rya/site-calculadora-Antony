@@ -13,11 +13,33 @@ function imprimirMsg(texto){
 
 function engual(){
     let conta = valorDisplay.value
-        let num1 = conta.slice(0, conta.indexOf("/"-1))
-        let num2 = conta.slice(conta.indexOf("/" + 1))
-        num1 = parseInt(num1)
-        num2 = parseInt(num2)
-        valorDisplay = num1/num2
+    if (valorDisplay.includes("/")){
+            var numeros = conta.split("/")
+            num1 = numeros[0]
+            num2 = numeros[1]
+            valorDisplay.value = num1/num2
+    }
+    elif (valorDisplay.includes("-"));{
+        var numeros = conta.split("-")
+            num1 = numeros[0]
+            num2 = numeros[1]
+            valorDisplay.value = num1-num2
+    }
+    elif (valorDisplay.includes("+"));{
+        var numeros = conta.split("+")
+            num1 = numeros[0]
+            num2 = numeros[1]
+            valorDisplay.value = num1+num2
+    }
+    elif (valorDisplay.includes("x"));{
+        var numeros = conta.split("x")
+            num1 = numeros[0]
+            num2 = numeros[1]
+            valorDisplay.value = num1*num2
+    }
+
+            
+
         
 
  
