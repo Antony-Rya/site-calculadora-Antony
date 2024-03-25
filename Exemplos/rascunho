@@ -1,0 +1,64 @@
+function digitarValor(valor){
+    valorDisplay = document.getElementById("display");
+    ultimoDigitado = valorDisplay.value.charAt(valorDisplay.value.length - 1)
+    valorDisplay.value += valor;
+     switch(valor){
+        case "+":
+        case "-":
+        case "x":
+        case "/":
+             if (ultimoDigitado != "/"
+                && ultimoDigitado != "-"
+                    && ultimoDigitado != "x"
+                        && ultimoDigitado != "+"){
+                  valorDisplay.value += valor;
+             }
+            break;
+        case "=":
+            if (ultimoDigitado != "/"
+                && ultimoDigitado != "-"
+                    && ultimoDigitado != "x"
+                        && ultimoDigitado != "+"){
+                            identificarOperacao(valorDisplay.value)
+                        }
+        default:
+             valorDisplay.value += valor;
+             break;     
+     }
+}
+function identificarOperacao(expressao){
+    if(expressao.includes("+")){
+        alert("soma")
+    }
+
+
+}
+// function engual(){
+//     let conta = valorDisplay.value
+//     let nums = conta.replace("/", " ").replace("-", " ").replace("+", " ").replace("x", " ")
+//     var numeros = nums.split(" ")
+//     if (conta.includes(".")){
+//         var num1 = parseFloat(numeros[0])
+//         var num2 = parseFloat(numeros[1])
+//     }
+//     switch (true){
+//         case valorDisplay.value.includes("/"):
+//             var numeros = conta.split("/")
+//             valorDisplay.value = num1/num2
+//             break;
+//         case valorDisplay.value.includes("+"):
+//             var numeros = conta.split("+")
+//             valorDisplay.value = num1+num2
+//             break;
+//         case valorDisplay.value.includes("-"):
+//             var numeros = conta.split("-")
+//             valorDisplay.value = num1-num2
+//             break;
+//         case valorDisplay.value.includes("x"):
+//             valorDisplay.value = num1*num2
+//             break;
+//     }
+}
+function zerar(){
+    valorDisplay.value = ""
+}
