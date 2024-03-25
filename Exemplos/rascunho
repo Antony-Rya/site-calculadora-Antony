@@ -29,7 +29,12 @@ function digitarValor(valor){
 function identificarOperacao(expressao){
     if(expressao.includes("+")){
         alert("soma")
-    }
+    }else if(expressao.includes("-")){
+        alert("soma")
+    }else if(expressao.includes("/")){
+        alert("soma")
+    }else if(expressao.includes("x")){
+        alert("soma")
 
 
 }
